@@ -13,7 +13,7 @@ rust-version = "1.56"
 
 [dependencies]
 once_cell = "1.17"
-regex = {version = "1.9", default_features = false, features = ["std"], optional = true}
+regex = {version = "1.9", default_features = false, optional = true}
 regex-lite = {version = "0.1", optional = true}
 
 [dependencies.lazy-regex-proc_macros]
@@ -37,6 +37,7 @@ unicode-gencat = ["regex/unicode-gencat"]
 unicode-perl = ["regex/unicode-perl"]
 unicode-script = ["regex/unicode-script"]
 unicode-segment = ["regex/unicode-segment"]
+no_std = ["regex"]
 
 [workspace]
 members = ["src/proc_macros", "examples/regexes"]
